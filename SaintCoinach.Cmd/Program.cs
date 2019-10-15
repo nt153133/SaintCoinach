@@ -22,14 +22,14 @@ namespace SaintCoinach.Cmd {
     }
     class Program {
         private static void Main(string[] args) {
-            var dataPath = Properties.Settings.Default.DataPath;
+            var dataPath = @"H:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn";
 
             if (args.Length > 0) {
                 dataPath = args[0];
                 args = args.Skip(1).ToArray();
             }
             if (string.IsNullOrWhiteSpace(dataPath))
-                dataPath = SearchForDataPaths().FirstOrDefault(p => System.IO.Directory.Exists(p));
+                dataPath = SearchForDataPaths().FirstOrDefault(System.IO.Directory.Exists);
             if (string.IsNullOrWhiteSpace(dataPath) || !System.IO.Directory.Exists(dataPath)) {
                 Console.WriteLine($"Need data!  The path '{dataPath}' doesn't exist.");
                 return;

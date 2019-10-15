@@ -67,7 +67,7 @@ namespace SaintCoinach.Graphics.Viewer.Interop {
 
         static void HavokLoop() {
             try {
-                initHkInterop();
+                //initHkInterop();
 
                 while (true) {
                     if (_IsAwaiting) {
