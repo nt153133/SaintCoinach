@@ -52,7 +52,14 @@ namespace SaintCoinach.Xiv {
         /// </summary>
         /// <value>The numeric order of the current content.</value>
         public int SortKey { get { return AsInt32("SortKey"); } }
-
+        
+        //Order
+        /// <summary>
+        /// Gets the numeric order of the current content.
+        /// </summary>
+        /// <value>The numeric order of the current content.</value>
+        public int ContentFinderCondition { get { return AsInt32("Order"); } }
+        
         /// <summary>
         /// Gets a value indicating whether a preformed alliance of parties can register for the current content.
         /// </summary>

@@ -63,6 +63,9 @@
       <HintPath>..\packages\FileHelpers.3.4.1\lib\net45\FileHelpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -90,6 +93,7 @@
     <Compile Include="Commands\BgmCommand.cs" />
     <Compile Include="Commands\ExdCommand.cs" />
     <Compile Include="Commands\ExdHeaderCommand.cs" />
+    <Compile Include="Commands\InstanceCommand.cs" />
     <Compile Include="Commands\LanguageCommand.cs" />
     <Compile Include="Commands\ImageCommand.cs" />
     <Compile Include="Commands\LeveCommand.cs" />
@@ -97,6 +101,7 @@
     <Compile Include="Commands\MapCommand.cs" />
     <Compile Include="Commands\RawExdCommand.cs" />
     <Compile Include="Commands\SqlExport.cs" />
+    <Compile Include="DeepDungeon.cs" />
     <Compile Include="EntranceNpc.cs" />
     <Compile Include="ExdHelper.cs" />
     <Compile Include="MappyNPC.cs" />
