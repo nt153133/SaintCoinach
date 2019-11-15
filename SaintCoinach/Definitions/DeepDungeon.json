@@ -3,68 +3,43 @@
   "defaultColumn": "Name",
   "definitions": [
     {
+      "name": "AetherpoolArm",
+      "converter": {
+        "type": "link",
+        "target": "DeepDungeonEquipment"
+      }
+    },
+    {
+      "index": 1,
+      "name": "AetherpoolArmor",
+      "converter": {
+        "type": "link",
+        "target": "DeepDungeonEquipment"
+      }
+    },
+    {
       "index": 2,
-      "name": "Inventory1"
+      "type": "repeat",
+      "count": 16,
+      "definition": {
+        "name": "PomanderSlot",
+        "converter": {
+          "type": "link",
+          "target": "DeepDungeonItem"
+        }
+      }
     },
     {
-      "index": 3,
-      "name": "Inventory2"
-    },
-    {
-      "index": 4,
-      "name": "Inventory3"
-    },
-    {
-      "index": 5,
-      "name": "Inventory4"
-    },
-    {
-      "index": 6,
-      "name": "Inventory5"
-    },
-    {
-      "index": 7,
-      "name": "Inventory6"
-    },
-    {
-      "index": 8,
-      "name": "Inventory7"
-    },
-    {
-      "index": 9,
-      "name": "Inventory8"
-    },
-    {
-      "index": 10,
-      "name": "Inventory9"
-    },
-    {
-      "index": 11,
-      "name": "Inventory10"
-    },
-    {
-      "index": 12,
-      "name": "Inventory11"
-    },
-    {
-      "index": 13,
-      "name": "Inventory12"
-    },
-    {
-      "index": 14,
-      "name": "Inventory13"
-    },
-    {
-      "index": 15,
-      "name": "Inventory14"
-    },
-    {
-      "index": 16,
-      "name": "Inventory15"
-    },
-    {
-      "index": 17,
-      "name": "Inventory16"
+      "index": 18,
+      "type": "repeat",
+      "count": 4,
+      "definition": {
+        "name": "MagiciteSlot",
+        "converter": {
+          "type": "link",
+          "target": "DeepDungeonMagicStone"
+        }
+      }
     },
     {
       "index": 22,
@@ -72,7 +47,11 @@
     },
     {
       "index": 23,
-      "name": "ContentFinderCondition"
+      "name": "ContentFinderCondition{Start}",
+      "converter": {
+        "type": "link",
+        "target": "ContentFinderCondition"
+      }
     }
   ]
 }
