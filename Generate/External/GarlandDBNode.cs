@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace SaintCoinach.Cmd.External
+namespace Generate.External
 {
     public partial class GarlandDBNode
     {

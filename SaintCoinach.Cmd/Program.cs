@@ -22,7 +22,7 @@ namespace SaintCoinach.Cmd {
     }
     class Program {
         private static void Main(string[] args) {
-            var dataPath = @"H:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn";
+            var dataPath = @"G:\Program Files (x86)\SquareEnix\FINAL FANTASY XIV - A Realm Reborn";
 
             if (args.Length > 0) {
                 dataPath = args[0];

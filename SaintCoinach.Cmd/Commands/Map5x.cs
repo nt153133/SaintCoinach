@@ -42,8 +42,8 @@ namespace SaintCoinach.Cmd.Commands
             //var target = new FileInfo(Path.Combine(_Realm.GameVersion, CsvFileFormat));
             //	if (!target.Directory.Exists)
             //		target.Directory.Create();
-            var engine = new FileHelperEngine<MappyNPC>();
-            var result = engine.ReadFile(@"H:\xivapi_mappy_2019-10-13-10-11-12.csv");
+            FileHelperEngine<MappyNPC> engine = new FileHelperEngine<MappyNPC>();
+            MappyNPC[] result = engine.ReadFile(@"H:\xivapi_mappy_2019-10-13-10-11-12.csv");
 
             var DeepDungeons = _Realm.GameData.GetSheet("DeepDungeon");
             var Pomandander = _Realm.GameData.GetSheet("DeepDungeonItem");
@@ -52,9 +52,9 @@ namespace SaintCoinach.Cmd.Commands
             var InstanceContent = _Realm.GameData.GetSheet("InstanceContent");
             //var TerritoryType = _Realm.GameData.GetSheet("TerritoryType");
             var TerritoryType = _Realm.GameData.GetSheet<TerritoryType>();
+            var Aetheryte = _Realm.GameData.GetSheet("Aetheryte");
             var Quests = _Realm.GameData.GetSheet<Quest>();
             var PlaceName = _Realm.GameData.GetSheet<PlaceName>();
-            var Aetheryte = _Realm.GameData.GetSheet("Aetheryte");
             var test = _Realm.Packs.GetFile(@"bg/ffxiv/fst_f1/cnt/f1c1/collision/f1c1_a1_ge01a.pcb");
 
             var poms = Pomanders();

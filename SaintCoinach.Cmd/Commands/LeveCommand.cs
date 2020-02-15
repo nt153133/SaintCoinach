@@ -113,10 +113,11 @@ namespace SaintCoinach.Cmd.Commands {
             foreach(var nnpc in existing.Npcs)
             {
                 OutputInformation($"Checking {nnpc.NpcId}");
-                var x = levenpcs.First(i => i.Object.Key == nnpc.NpcId);
-                OutputInformation($"Found {levenpcs.Count(i => i.Object.Key == nnpc.NpcId)}");
+                var x = levenpcs.FirstOrDefault(i => i.Object.Key == nnpc.NpcId);
                 if (x == null)
                     continue;
+                OutputInformation($"Found {levenpcs.Count(i => i.Object.Key == nnpc.NpcId)}");
+
                 if (nnpc.Pos.X != x.X || nnpc.Pos.Y != x.Y || nnpc.Pos.Z != x.Z || nnpc.MapId != x.Map.Key)
                 {
                     

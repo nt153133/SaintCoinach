@@ -8,17 +8,17 @@ namespace SaintCoinach.Xiv {
     public class RetainerTask : XivRow, IItemSource {
         #region Properties
 
-        public ClassJobCategory ClassJobCategory { get { return As<ClassJobCategory>(); } }
+        public byte ClassJobCategory { get { return (byte) As<ClassJobCategory>().Key; } }
         public bool IsRandom { get { return AsBoolean("IsRandom"); } }
         public int RetainerLevel { get { return AsInt32("RetainerLevel"); } }
         public int VentureCost { get { return AsInt32("VentureCost"); } }
-        public TimeSpan BaseDuration { get { return TimeSpan.FromMinutes(AsInt32("MaxTime{min}")); } }
+        public int MaxTime { get { return AsInt32("MaxTime{min}"); } }
         public int Experience { get { return AsInt32("Experience"); } }
         public int RequiredItemLevel { get { return AsInt32("RequiredItemLevel"); } }
         public int RequiredGathering { get { return AsInt32("RequiredGathering"); } }
         public RetainerTaskBase Task { get { return As<RetainerTaskBase>("Task"); } }
-
         public IEnumerable<Item> Items { get { return ((IItemSource)Task).Items; } }
+        
 
         #endregion
 

@@ -88,9 +88,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassAction.cs" />
     <Compile Include="Commands\AllExdCommand.cs" />
     <Compile Include="Commands\AllExdRawCommand.cs" />
     <Compile Include="Commands\BgmCommand.cs" />
+    <Compile Include="Commands\DawnCommand.cs" />
     <Compile Include="Commands\ExdCommand.cs" />
     <Compile Include="Commands\ExdHeaderCommand.cs" />
     <Compile Include="Commands\InstanceCommand.cs" />
@@ -100,11 +102,20 @@
     <Compile Include="Commands\Map5x.cs" />
     <Compile Include="Commands\MapCommand.cs" />
     <Compile Include="Commands\RawExdCommand.cs" />
+    <Compile Include="Commands\SightSeeComand.cs" />
+    <Compile Include="Commands\SkybuildersCommand.cs" />
     <Compile Include="Commands\SqlExport.cs" />
+    <Compile Include="Commands\TestCommand.cs" />
     <Compile Include="DeepDungeon.cs" />
     <Compile Include="EntranceNpc.cs" />
     <Compile Include="ExdHelper.cs" />
+    <Compile Include="External\GarlandDBNode.cs" />
+    <Compile Include="External\GarlandFishing.cs" />
+    <Compile Include="GatheringData.cs" />
+    <Compile Include="Helpers.cs" />
     <Compile Include="MappyNPC.cs" />
+    <Compile Include="Objects\Item.cs" />
+    <Compile Include="Objects\ItemAttribute.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

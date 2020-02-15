@@ -1,6 +1,10 @@
-﻿using FileHelpers;
+﻿
+ using Clio.Utilities;
+ using FileHelpers;
 
-namespace SaintCoinach.Cmd
+ using SaintCoinach.Xiv;
+
+ namespace Generate
 {
     [DelimitedRecord(",")]
     [IgnoreFirst]
@@ -11,6 +15,7 @@ namespace SaintCoinach.Cmd
         public int ENpcResidentID;
         public int BNpcNameID;
         public int BNpcBaseID;
+        [FieldQuoted]
         public string Name;
         public string Type;
         public string MapID;
@@ -32,6 +37,14 @@ namespace SaintCoinach.Cmd
         public string Managed;
 
         [FieldOptional] public string other;
+
+
+        public string GetCords() => $"{CoordinateX}, {CoordinateZ}, {CoordinateY}";
+
+        public TerritoryType TerritoryType => SaintCHelper.GetTerritoryById(MapTerritoryID);
         
+        public Vector3 Location => new Vector3(CoordinateX, CoordinateZ, CoordinateY);
+
+
     }
 }

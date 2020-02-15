@@ -76,7 +76,7 @@ namespace SaintCoinach.Xiv {
         ///     Gets the integer key of the object containing additional information.
         /// </summary>
         /// <value>The integer key of the object containing additional information.</value>
-        public int DataId { get { return AsInt32("DataId"); } }
+        public CraftLeve DataId { get { return As<CraftLeve>("DataId"); } }
 
         /// <summary>
         ///     Gets the <see cref="LeveRewardItem" /> the current leve offers.

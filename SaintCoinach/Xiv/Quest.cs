@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using SaintCoinach.Ex.Relational;
+using SaintCoinach.Text;
 
 namespace SaintCoinach.Xiv {
     public class Quest : XivRow, IItemSource {
@@ -45,6 +46,28 @@ namespace SaintCoinach.Xiv {
         public Imaging.ImageFile SpecialIcon { get { return AsImage("Icon{Special}"); } }
 
         public int SortKey { get { return AsInt32("SortKey"); } }
+
+        public List<KeyValuePair<XivString, int>> Instructions
+        {
+            
+            get
+            {
+                List<KeyValuePair<XivString, int>> scriptInstructions = new List<KeyValuePair<XivString, int>>();
+                for (int i = 0; i < 50; i++)
+                {
+
+                        if (AsString($"Script{{Instruction}}[{i}]").ToString() != "")
+                        {
+                            int itemId = AsInt32($"Script{{Arg}}[{i}]");
+                            
+                            scriptInstructions.Add(new KeyValuePair<XivString, int>(AsString($"Script{{Instruction}}[{i}]") , itemId));
+                        }
+
+                }
+
+                return scriptInstructions;
+            }
+        }
 
         public QuestRewards Rewards { get { return _Rewards ?? (_Rewards = new QuestRewards(this)); } }
 

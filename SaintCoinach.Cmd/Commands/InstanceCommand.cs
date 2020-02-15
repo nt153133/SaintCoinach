@@ -31,16 +31,12 @@ namespace SaintCoinach.Cmd.Commands {
             
             var ContentFinderCond = _Realm.GameData.GetSheet<ContentFinderCondition>();
             var InstanceContent = _Realm.GameData.GetSheet<InstanceContent>();
-            //var InstanceContent = _Realm.GameData.GetSheet("InstanceContent");
             Dictionary<int,int> mapping = new Dictionary<int, int>();
 
             foreach (var instance in InstanceContent)
             {
                 if (instance.ContentFinderCondition == 0) continue;
                 mapping.Add(instance.Key, instance.ContentFinderCondition);
-                
-                
-
             }
 
             OutputInformation($"Count - Here");

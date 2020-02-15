@@ -60,7 +60,7 @@ namespace SaintCoinach.Xiv {
                     continue;
 
                 var val = AsInt32("Value", i);
-                items.Add(new ItemValue(item, val, i));
+                items.Add(new ItemValue(item, val, i, As<BaseParam>("BaseParam").Name));
             }
 
             return items.ToArray();
@@ -93,6 +93,8 @@ namespace SaintCoinach.Xiv {
             /// </summary>
             /// <value>The materia tier of the current pair.</value>
             public int Tier { get; private set; }
+            
+            public string BaseParam { get; private set; }
 
             #endregion
 
@@ -104,10 +106,11 @@ namespace SaintCoinach.Xiv {
             /// <param name="item"><see cref="Item" /> of the pair.</param>
             /// <param name="value">Value of the pair.</param>
             /// <param name="tier">Tier of the pair.</param>
-            public ItemValue(Item item, int value, int tier) {
+            public ItemValue(Item item, int value, int tier, string baseParam) {
                 Item = item;
                 Value = value;
                 Tier = tier;
+                BaseParam = baseParam;
             }
 
             #endregion
