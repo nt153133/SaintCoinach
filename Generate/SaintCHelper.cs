@@ -28,7 +28,7 @@ namespace Generate
             Console.WriteLine("Game version: {0}", realm.GameVersion);
             Console.WriteLine("Definition version: {0}", realm.DefinitionVersion);
 
-            LoadGarlandData();
+            //LoadGarlandData();
         }
 
         public static TerritoryType GetTerritoryById(int id)
